@@ -1,0 +1,152 @@
+/* body */
+body {
+  background-color: #9bbbd4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+header span {
+  font-size: 32px;
+  font-weight: bold;
+  color: #3a1d1d;
+  margin-bottom: 20px;
+}
+
+.date-controller {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+#today-date {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3a1d1d;
+}
+
+.date-controller button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #3a1d1d;
+  transition: transform 0.2s;
+}
+
+.date-controller button:hover {
+  transform: scale(1.2);
+}
+
+/* todo form */
+#todo-form {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  gap: 20px;
+  width: 300px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* todo input */
+#todo-input {
+  flex-grow: 1;
+  border: 0;
+}
+
+#submit-button {
+  background-color: #f7e600;
+  color: #3a1d1d;
+  border: 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+
+/* todo item */
+#todo-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* ul 안의 li들은 기본적으로 paddiing left 40px을 가짐.. 이걸 없애줘야 가운데 정렬됨 */
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7e600;
+  color: #3a1d1d;
+  border-radius: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-checkbox {
+  display: none;
+}
+
+.checkmark {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 15px;
+  position: relative;
+}
+
+.todo-checkbox:checked + .checkmark {
+  background-color: #5bd15f;
+}
+
+.todo-checkbox:checked + .checkmark::after {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.todo-text {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 10px;
+  word-break: break-all;
+}
+
+.delete-button {
+  background-color: #3a1d1d;
+  color: #f7e600;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-button:hover {
+  background-color: black;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kor">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TodoList</title>
+  </head>
+  <body>
+    <header>
+      <span>To Do</span>
+      <div class="date-controller">
+        <button id="prev-day">◀</button>
+        <time id="today-date">0000년 00월 00일</time>
+        <button id="next-day">▶</button>
+      </div>
+    </header>
+    <main>
+      <form id="todo-form">
+        <input
+          type="text"
+          id="todo-input"
+          placeholder="오늘의 할일을 적어주세요!"
+          required
+        />
+        <div>
+          <span id="todo-count">0개</span>
+          <button type="submit" id="submit-button">등록</button>
+        </div>
+      </form>
+      <ul id="todo-list"></ul>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
